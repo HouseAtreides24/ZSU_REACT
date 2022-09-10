@@ -1,0 +1,13 @@
+    let [ships,setShips] = useState([])
+
+    useEffect(() => {
+        fetch('https://api.spacexdata.com/v3/launches/')
+                .then( response=>response.json())
+                .then(newUser=> {
+                    setShips(newUser)
+                } )
+    })
+
+Це два елементарні хуки, які нам потрібні для роботи з серверами.....
+Вони використовуються для того щоб дані ф-ії виконувалися синхронно
+ useEffect(() =>{})  and  let [ships,setShips] = useState([])

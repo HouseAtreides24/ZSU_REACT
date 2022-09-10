@@ -1,0 +1,10 @@
+.images{
+    height: 300px;
+    width: 300px;
+    padding: 10px;
+    border: solid red 2px;
+    border-radius: 10px;
+}
+.ship{
+    border: solid darkblue 4px;
+}
