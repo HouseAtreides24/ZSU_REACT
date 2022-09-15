@@ -1,0 +1,31 @@
+.flex-parent-element {
+    display: flex;
+    width: 90%;
+}
+
+.flex-child-element {
+
+    flex: 1;
+    border: 2px solid blueviolet;
+    margin: 10px;
+    width: 45%;
+}
+
+.flex-child-element:first-child {
+    margin-right: 20px;
+}
+.btn1{
+    float: right;
+}
+
+.flexSecond-parent-element {
+    display: flex;
+
+}
+
+.flexSecond-child-element {
+
+    flex: 1;
+    margin: 10px;
+    width: 45%;
+}

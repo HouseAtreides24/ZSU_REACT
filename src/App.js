@@ -1,8 +1,10 @@
 import React, {useEffect, useState} from "react";
 import './App.css'
 //import McBook from "./Lesson1/McBook";
-import Ships from "./Lesson1/Ships";
-import Userrs from "./Lesson1/components/Userrs";
+import Users from '../src/Lesson2/components/Users'
+import '../src/Lesson2/styles.css'
+import Details from '../src/Lesson2/components/Details'
+
 
 // let mcBooks = [
 //     {name:"Apple MacBook Air 13“ Space Gray M2" ,
@@ -32,41 +34,58 @@ import Userrs from "./Lesson1/components/Userrs";
 //             "Класифікація операційної системи\n" +
 //             "Monterey\n" }
 // ]
+//
+// function App() {
+//     //console.log("WWWWWWWWWWW")
+//         let myObj = {
+//             name: "Vasyz",
+//             age: 31
+//         }
+//
+//
+//
+//   return (
+//       <div>
+//          <My>
+//              My friends
+//              My family
+//              My mather
+//          </My>
+//       </div>
+// );
+// }
+//
+// export default App;
+// import React from 'react';
 
-function App() {
+// Events
 
-    let [ships,setShips] = useState([])
+const App = () => {
+    // let [greeting,setGriting] = useState("Hello")
+    // const add = ()=>{
+    //     greeting+='!'
+    //     setGriting(greeting);
+    //     console.log(greeting)
+    // }
 
-    useEffect(() => {
-        fetch('https://api.spacexdata.com/v3/launches/')
-                .then( response=>response.json())
-                .then(newUser=> {
-                    setShips(newUser)
-                } )
-    },[])
+    return (
+        <div>
 
+         {/*<button onClick={add}>Clisk</button>*/}
+         {/*   {greeting}*/}
+            <div className='flex-parent-element'>
+                <div className='flex-child-element'>
+                    <Users/>
+                </div>
+                <div className='flex-child-element'>
 
-
-  return (
-      <div>
-          {/*{*/}
-          {/*    mcBooks.map(value => <McBook name={value.name} id={value.id}*/}
-          {/*    photo={value.photo} information={value.information}/>)*/}
-          {/*}mission_name,launch_year,mission_path_small*/}
-          {/*<div className='foo'>*/}
-          {/*    {*/}
-          {/*        ships.filter(ships=>ships.launch_year==2010).map(value=><Ships*/}
-          {/*            mission_name={value.mission_name} launch_year={value.launch_year}*/}
-          {/*            mission_path_small={value.links.mission_patch_small}/>)*/}
-          {/*    }*/}
-          {/*</div>*/}
-          <div className='foo'>
-              <Userrs/>
-          </div>
+                </div>
+            </div>
 
 
-      </div>
-);
-}
+
+        </div>
+    );
+};
 
 export default App;
